@@ -9,32 +9,35 @@
 	<name>onlineshopping Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<javaee-version>7.0</javaee-version>
-		<spring-version>5.2.1.RELEASE</spring-version>
+		<javaee.version>8.0</javaee.version>
+		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+	<!-- Java ee API 
+		<dependency>
+			<groupId>com.nanowebhub</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>-->
+		<!-- Java ee API -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
-			<version>${javaee-version}</version>
+			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring-version}</version>
-		</dependency>
-		
-		<!-- JSTL -->
+		<!-- JSTL API -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
+		<!-- Spring Jar File for Dependancy -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -44,8 +47,8 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>onlineshopping</finalName>
 		<plugins>
+			<!-- Update latest Version of java -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -55,5 +58,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>onlineshopping</finalName>
 	</build>
 </project>
